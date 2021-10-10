@@ -4,14 +4,14 @@ import App from "./app";
 import {BrowserRouter, BrowserRouter as Router} from "react-router-dom";
 
 import "./index.css";
-import {Auth0Provider} from "@auth0/auth0-react";
+import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
 ReactDOM.render(
     <Router>
         <BrowserRouter>
-            <Auth0Provider>
+            <Auth0ProviderWithHistory>
                 <App/>
-            </Auth0Provider>
+            </Auth0ProviderWithHistory>
         </BrowserRouter>
     </Router>,
     document.getElementById("root")
